@@ -1,0 +1,285 @@
+/* FONTS
+-------------------------------------------------------------------------------------------*/
+/* TEXT STYLES
+-------------------------------------------------------------------------------------------*/
+/* CSS
+-------------------------------------------------------------------------------------------*/
+/* FLEX
+------------------------------------------------------------------------------------------*/
+/* KEYFRAMES
+-------------------------------------------------------------------------------------------*/
+/* KEYFRAMES
+-------------------------------------------------------------------------------------------*/
+@keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+@-webkit-keyframes bottom-to-top {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes bottom-to-top {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-o-keyframes bottom-to-top {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bottom-to-top {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* SVG
+------------------------------------------------------------------------------------------*/
+/* SOCIAL ICONS
+------------------------------------------------------------------------------------------*/
+/* ARROW
+------------------------------------------------------------------------------------------*/
+/* ICONS
+------------------------------------------------------------------------------------------*/
+/* HEADER
+-------------------------------------------------------------------------------------------*/
+.intro {
+  padding: 100px 0;
+}
+.intro h1 {
+  margin: 200px 0 180px 0;
+}
+.intro .shapes {
+  width: 2000px;
+  height: 840px;
+  top: 230px;
+  margin-left: -1000px;
+}
+.intro.resources {
+  padding-bottom: 75px;
+}
+.intro.resources h1 {
+  margin-top: 150px;
+}
+
+#shape2 .shapes {
+  background-position: -2000px;
+}
+
+#shape3 .shapes {
+  background-position: -4000px;
+}
+
+#shape4 .shapes {
+  background-position: -6000px;
+}
+
+.icon-scroll {
+  display: inherit;
+  width: 20px;
+  height: 34px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  margin-top: 25px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  border: 2px solid #212B3B;
+  transition: all 0.3s ease;
+}
+.icon-scroll:before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #212B3B;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-name: mouse-scroll;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+.icon-scroll span {
+  float: right;
+  margin-right: 38px;
+  font-family: mono45-headline, Courier, monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.6em;
+  line-height: 36px;
+  letter-spacing: 2px;
+  color: #212B3B;
+}
+
+/* HOME
+-------------------------------------------------------------------------------------------*/
+.text {
+  padding: 120px 0 100px 0;
+}
+.text p.swipe {
+  display: inherit;
+}
+
+#book.text .wrap {
+  max-width: 960px;
+}
+
+.left-col {
+  float: left;
+  width: 58.333333%;
+  /*560/960*/
+}
+
+.right-col {
+  float: right;
+  width: 31.25%;
+  /*300/960*/
+  margin-left: 10.416667%;
+  /*100/960*/
+  clear: none;
+  padding-top: 0;
+}
+
+/* GALLERY
+-------------------------------------------------------------------------------------------*/
+#gallery img {
+  cursor: ew-resize;
+}
+#gallery .slick-dots:after {
+  bottom: 100px;
+}
+#gallery .slick-dots li {
+  bottom: 100px;
+}
+
+/* BUY
+-------------------------------------------------------------------------------------------*/
+.options-reviews .wrap,
+#options .wrap,
+#paperback .wrap {
+  max-width: 960px;
+}
+
+#options {
+  margin: 0 0 60px 0;
+}
+
+#paperback {
+  padding: 60px 0;
+}
+
+#options .wrap,
+#paperback .wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#options .option,
+#paperback .option {
+  width: 100%;
+  max-width: 233px;
+  padding: 40px 30px;
+  float: none;
+  clear: none;
+  display: inline-block;
+}
+#options .option span.icon,
+#paperback .option span.icon {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#paperback {
+  margin: 0;
+}
+#paperback h2 {
+  margin-bottom: 60px;
+}
+#paperback .option.book-option {
+  width: 100%;
+  max-width: 340px;
+  padding: 0 60px 40px 60px;
+}
+#paperback .option.book-option img {
+  width: 460px;
+  margin: 0 -60px;
+}
+#paperback .option.book-option h4, #paperback .option.book-option h5 {
+  margin-top: 60px;
+}
+#paperback .option.book-option h6 {
+  margin: 30px 0 20px 0;
+}
+#paperback .option.book-option p {
+  margin-top: 30px;
+}
+#paperback .option.book-option.seo-option {
+  max-width: none;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#paperback .option.book-option.seo-option h2 {
+  margin: 60px 0 10px 0;
+}
+
+.book-preview {
+  width: 50%;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+}
+
+.book-info {
+  width: 50%;
+  float: right;
+  clear: none;
+}
+
+/* RESOURCES
+-------------------------------------------------------------------------------------------*/
+.links ul {
+  margin-bottom: 75px;
+}
+.links ul li {
+  line-height: 38px;
+}
+
+/*# sourceMappingURL=desktop.css.map */
