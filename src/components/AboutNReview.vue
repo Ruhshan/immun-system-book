@@ -16,7 +16,7 @@
             বইটিতে চেষ্টা করা হয়েছে জীবন ও জীবাণুর রেষারেষি নিয়ে কিছুটা ধারণা দেওয়ার। অণুজীবের সমুদ্রে ডুবে থেকেও ইমিউন সিস্টেম কিভাবে আপনাকে বাঁচিয়ে রাখছে, জীবাণুরা ইমিউন সিস্টেমকে ফাঁকি দিতে কি সব চালাকি করছে, কিভাবে ইমিউন সিস্টেম বিগড়ে গিয়ে উপকারের তুলনার ক্ষতির কারণ হচ্ছে ইত্যাদি আগ্রোহদ্দীপক বিষয়ে আলোকপাত করার। 
         </p>
         <p class="swipe">
-          <em>Swipe left-to-right on the image below to preview the book.</em>
+          <!-- <em>Swipe left-to-right on the image below to preview the book.</em> -->
         </p>
       </div>
       <div class="reviews right-col">

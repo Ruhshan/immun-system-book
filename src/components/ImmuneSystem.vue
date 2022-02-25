@@ -7,6 +7,7 @@
           <a
             href="#"
             class="buy"
+            style="z-index:300"
             ><strong>সংগ্রহ করতে</strong></a
           >
           <a
@@ -18,8 +19,6 @@
         <h1>
           <span class="a-wrap"><span class="l1">ইমিউন </span></span>
           <span class="a-wrap"><span class="l2">সিস্টেম </span></span>
-          <!-- <span class="a-wrap"><span class="l3">Found—</span></span>
-          <span class="a-wrap"><span class="l4">ations</span></span> -->
         </h1>
         <h2>শরীর যেভাবে রোগ প্রতিরোধ করে</h2>
         <h3>— <a href="#author">রুহশান আহমেদ</a></h3>
@@ -33,18 +32,21 @@
     </section>
 
     <about-n-review />
+    <sample />
   </div>
 </template>
 
 <script>
 import AboutNReview from './AboutNReview.vue';
 import Animations from './Animations.vue';
+import Sample from './Sample.vue';
 
 export default {
   name: "ImmuneSystem",
   components: {
     Animations,
     AboutNReview,
+    Sample,
   },
 };
 </script>
