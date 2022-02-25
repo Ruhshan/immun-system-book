@@ -17,8 +17,8 @@
           >
         </nav>
         <h1>
-          <span class="a-wrap"><span class="l1">ইমিউন </span></span>
-          <span class="a-wrap"><span class="l2">সিস্টেম </span></span>
+          <span class="a-wrap"><span class="tstyle">ইমিউন </span></span>
+          <span class="a-wrap"><span class="tstyle">সিস্টেম </span></span>
         </h1>
         <h2>শরীর যেভাবে রোগ প্রতিরোধ করে</h2>
         <h3>— <a href="#author">রুহশান আহমেদ</a></h3>
@@ -57,4 +57,11 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+ 
+.tstyle{
+  font-family: 'Niladri', Helvetica, Arial;
+  font-size: 120px;
+}
+
+</style>

@@ -19,7 +19,8 @@ library.add(
   faLinkedin,
   faMedium,
   faResearchgate,
-  faFacebook
+  faFacebook,
+  faResearchgate
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);

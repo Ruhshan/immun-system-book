@@ -17,10 +17,12 @@ export default {
 </script>
 
 <style>
+@import url('./assets/main.css');
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+
 
 }
 </style>

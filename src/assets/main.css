@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Niladri";
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    src: local("Niladri"),   url('/fonts/niladri.ttf') format("truetype");
+}
+  
+  
