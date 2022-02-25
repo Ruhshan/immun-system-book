@@ -6,15 +6,20 @@ import {
   faChevronCircleLeft,
   faChevronCircleRight,
   faPlusCircle,
-  faMinusCircle
+  faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import {faLinkedin, faResearchgate, faFacebook, faMedium} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon ,FontAwesomeLayers, FontAwesomeLayersText} from "@fortawesome/vue-fontawesome";
 
 library.add(
   faChevronCircleLeft,
   faChevronCircleRight,
   faPlusCircle,
-  faMinusCircle
+  faMinusCircle,
+  faLinkedin,
+  faMedium,
+  faResearchgate,
+  faFacebook
 );
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);

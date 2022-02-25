@@ -34,6 +34,7 @@
     <about-n-review />
     <sample />
     <chapters />
+    <about-author />
   </div>
 </template>
 
@@ -42,6 +43,7 @@ import AboutNReview from './AboutNReview.vue';
 import Animations from './Animations.vue';
 import Sample from './Sample.vue';
 import Chapters from './Chapters.vue';
+import AboutAuthor from './AboutAuthor.vue';
 
 export default {
   name: "ImmuneSystem",
@@ -49,7 +51,8 @@ export default {
     Animations,
     AboutNReview,
     Sample,
-    Chapters
+    Chapters,
+    AboutAuthor
   },
 };
 </script>
