@@ -5,14 +5,14 @@
         <nav class="animated fadeIn">
           <a href="#book" class="active"><strong>বই সম্পর্কে</strong></a>
           <a
-            href="https://designsystemfoundations.com/design-systems-book/"
+            href="#"
             class="buy"
-            >Buy the book</a
+            ><strong>সংগ্রহ করতে</strong></a
           >
           <a
-            href="https://designsystemfoundations.com/design-systems-book/"
+            href="#"
             class="buy-mobile"
-            >Buy now</a
+            ><strong>সংগ্রহ করতে</strong></a
           >
         </nav>
         <h1>
@@ -26,25 +26,25 @@
       </div>
       <div class="animated fadeIn"></div>
 
-      <div v-for="n in 3" :key="n">
-        <p style="display: none">{{ n }}</p>
-        <immune-cell cellType="antibody" />
-        <immune-cell cellType="bacteria" />
-        <immune-cell cellType="virus" />
-      </div>
+      <animations/>
+
 
       <div class="icon-scroll animated fadeIn"><span>স্ক্রল</span></div>
     </section>
+
+    <about-n-review />
   </div>
 </template>
 
 <script>
-import ImmuneCell from "./ImmuneCell.vue";
+import AboutNReview from './AboutNReview.vue';
+import Animations from './Animations.vue';
 
 export default {
   name: "ImmuneSystem",
   components: {
-    ImmuneCell,
+    Animations,
+    AboutNReview,
   },
 };
 </script>
