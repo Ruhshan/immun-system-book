@@ -26,7 +26,7 @@
       </div>
       <div class="animated fadeIn"></div>
 
-      <div v-for="n in 5" :key="n">
+      <div v-for="n in 3" :key="n">
         <p style="display: none">{{ n }}</p>
         <immune-cell cellType="antibody" />
         <immune-cell cellType="bacteria" />

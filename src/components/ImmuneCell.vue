@@ -3,26 +3,27 @@
     <img
       v-if="show"
       :src="require('../assets/' + cellType + '.svg')"
-      :class="{base:true, clockwiseSpin:clockWiseSpin, antiClockwiseSpin:!clockWiseSpin}"
+      :class="{
+        base: true,
+        clockwiseSpin: clockWiseSpin,
+        antiClockwiseSpin: !clockWiseSpin,
+      }"
       :style="{ left: leftPos + 'px', top: topPos + 'px' }"
     />
   </transition>
 </template>
 <script>
+
+import setRandomInterval from 'set-random-interval';
 export default {
+  
   name: "ImmuneCell",
   props: {
     cellType: String,
   },
   async mounted() {
-   
-    this.calculatePosition();
-    var wait = Math.floor(Math.random() * 5000);
-    
-    await this.sleep(wait);
-    this.clockWiseSpin = wait % 2 == 0 ? true: false
-    
-    this.show= true
+    this.interval= setRandomInterval(() => this.toggleObject(), 1000, 5000);
+
   },
   methods: {
     sleep: function (time) {
@@ -39,6 +40,14 @@ export default {
       this.leftPos = randomWeight;
       this.topPos = randomHeight;
     },
+    toggleObject: function () {
+      this.calculatePosition();
+      var wait = Math.floor(Math.random() * 5000);
+
+      this.clockWiseSpin = wait % 2 == 0 ? true : false;
+
+      this.show = !this.show;
+    },
   },
   data: function () {
     return {
@@ -46,7 +55,8 @@ export default {
       topPos: 0,
       show: false,
       t: true,
-      clockWiseSpin:true  
+      clockWiseSpin: true,
+      interval: null,
     };
   },
 };
@@ -56,7 +66,6 @@ export default {
   filter: invert(1);
   height: 100px;
   position: absolute;
-  
 }
 
 .fade-enter-active,
@@ -68,36 +77,35 @@ export default {
   transition: opacity 3s;
 }
 
-
 @keyframes clockwiseSpin {
-   from  {
-     transform: rotate(0deg);
+  from {
+    transform: rotate(0deg);
   }
   to {
-     transform: rotate(360deg);
-   }	
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes antiClockwiseSpin {
-   from  {
-     transform: rotate(360deg);
+  from {
+    transform: rotate(360deg);
   }
   to {
-     transform: rotate(0deg);
-   }	
+    transform: rotate(0deg);
+  }
 }
 
 .clockwiseSpin {
-   animation-duration: 10s;
-   animation-iteration-count: infinite;
-   animation-name: clockwiseSpin;
-   animation-timing-function: linear;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: clockwiseSpin;
+  animation-timing-function: linear;
 }
 
 .antiClockwiseSpin {
-   animation-duration: 10s;
-   animation-iteration-count: infinite;
-   animation-name: antiClockwiseSpin;
-   animation-timing-function: linear;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: antiClockwiseSpin;
+  animation-timing-function: linear;
 }
 </style>
