@@ -112,6 +112,5 @@ export default {
 <style scoped>
 .tstyle {
   font-family: "Niladri", Helvetica, Arial;
-  font-size: 120px;
 }
 </style>
