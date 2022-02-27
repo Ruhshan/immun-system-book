@@ -19,7 +19,7 @@
         <slick ref="slick" :options="slickOptions">
           <div v-for="review in reviews" :key="review.id">
             <blockquote style="width: 100%; display: inline-block">
-              <p style="font-style: normal !important; font-size:16px">
+              <p class="readers-comment">
                 {{ review.content }}
               </p>
               <cite
