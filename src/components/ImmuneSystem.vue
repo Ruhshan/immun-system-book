@@ -32,7 +32,7 @@
     <sample />
     <chapters />
     <about-author />
-    <div class="bar animated" v-show="!showScroll" >
+    <div class="bar animated" v-show="!showScroll">
       <a href="" class="button"><strong>সংগ্রহ করতে</strong></a>
     </div>
   </div>
@@ -56,15 +56,24 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
+    var initialScrollPointerPosition = this.getOffset(
+      document.getElementById("scrollPointer")
+    );
+    var bannerSize = document.getElementById("banner").getBoundingClientRect();
+
+    var delta = initialScrollPointerPosition.top - bannerSize.bottom;
+    if (delta > 0) {
+      this.delta = delta;
+    }
   },
   data() {
     return {
       showScroll: true,
+      initialScrollPointerPositionDelta: 0,
     };
   },
   methods: {
     handleScroll: function () {
-      //console.log("Handling scroll", event);
       var bannerSize = document
         .getElementById("banner")
         .getBoundingClientRect();
@@ -72,9 +81,8 @@ export default {
       var scrollPointerPosition = this.getOffset(
         document.getElementById("scrollPointer")
       );
-      console.log(scrollPointerPosition.top, bannerSize.bottom);
-      ("");
-      if (scrollPointerPosition.top > bannerSize.bottom) {
+
+      if (scrollPointerPosition.top > bannerSize.bottom+ this.delta+100) {
         this.showScroll = false;
       } else {
         this.showScroll = true;
