@@ -4,17 +4,10 @@
       <div class="wrap">
         <nav class="animated fadeIn">
           <a href="#book" class="active"><strong>বই সম্পর্কে</strong></a>
-          <a
-            href="#"
-            class="buy"
-            style="z-index:300"
+          <a href="#" class="buy" style="z-index: 300"
             ><strong>সংগ্রহ করতে</strong></a
           >
-          <a
-            href="#"
-            class="buy-mobile"
-            ><strong>সংগ্রহ করতে</strong></a
-          >
+          <a href="#" class="buy-mobile"><strong>সংগ্রহ করতে</strong></a>
         </nav>
         <h1>
           <span class="a-wrap"><span class="tstyle">ইমিউন </span></span>
@@ -25,10 +18,11 @@
       </div>
       <div class="animated fadeIn"></div>
 
-      <animations/>
+      <animations />
 
-
-      <div class="icon-scroll animated fadeIn"><span>স্ক্রল</span></div>
+      <div class="icon-scroll animated" :class="{'fadeIn': showScroll, 'fadeOut': !showScroll}">
+        <span id="scrollPointer">স্ক্রল</span>
+      </div>
     </section>
 
     <about-n-review />
@@ -39,11 +33,11 @@
 </template>
 
 <script>
-import AboutNReview from './AboutNReview.vue';
-import Animations from './Animations.vue';
-import Sample from './Sample.vue';
-import Chapters from './Chapters.vue';
-import AboutAuthor from './AboutAuthor.vue';
+import AboutNReview from "./AboutNReview.vue";
+import Animations from "./Animations.vue";
+import Sample from "./Sample.vue";
+import Chapters from "./Chapters.vue";
+import AboutAuthor from "./AboutAuthor.vue";
 
 export default {
   name: "ImmuneSystem",
@@ -52,16 +46,56 @@ export default {
     AboutNReview,
     Sample,
     Chapters,
-    AboutAuthor
+    AboutAuthor,
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  data() {
+    return {
+      showScroll: true,
+    };
+  },
+  methods: {
+    handleScroll: function () {
+      //console.log("Handling scroll", event);
+      var bannerSize = document.getElementById("banner").getBoundingClientRect();
+
+      var scrollPointerPosition = this.getOffset(document.getElementById("scrollPointer"));
+      console.log(scrollPointerPosition.top, bannerSize.bottom);''
+      if(scrollPointerPosition.top>bannerSize.bottom){
+          this.showScroll = false;
+      }
+      else{
+        this.showScroll = true;
+      }
+      
+      
+    },
+    getOffset: function (el) {
+      var _x = 0;
+      var _y = 0;
+      while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+        _x += el.offsetLeft - el.scrollLeft;
+        _y += el.offsetTop - el.scrollTop;
+        // chrome/safari
+        // if ($.browser.webkit) {
+        //   el = el.parentNode;
+        // } else {
+        //   // firefox/IE
+        //   el = el.offsetParent;
+        // }
+        el = el.offsetParent;
+      }
+      return { top: _y, left: _x };
+    },
   },
 };
 </script>
 
 <style scoped>
- 
-.tstyle{
-  font-family: 'Niladri', Helvetica, Arial;
+.tstyle {
+  font-family: "Niladri", Helvetica, Arial;
   font-size: 120px;
 }
-
 </style>

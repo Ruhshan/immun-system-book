@@ -1,7 +1,8 @@
 <template>
   <section id="gallery" class="text">
     <h2><strong>পড়ে দেখুন</strong></h2>
-    <flipbook v-slot="flipbook" class="flipbook" :ambient="1" :pages="pages">
+    <div style="; padding:10px">
+      <flipbook v-slot="flipbook" class="flipbook" :ambient="1" :pages="pages">
       <div class="page-nav">
         <font-awesome-layers full-width class="fa-3x">
           <font-awesome-icon
@@ -12,7 +13,7 @@
           ></font-awesome-icon>
           <font-awesome-layers-text
             class="gray8"
-            transform="right-20 shrink-8"
+            transform="right-22 shrink-8 down-2"
             value="পূর্ববর্তী"
           />
         </font-awesome-layers>
@@ -26,12 +27,13 @@
           ></font-awesome-icon>
           <font-awesome-layers-text
             class="gray8"
-            transform="left-20 shrink-8"
+            transform="left-22 shrink-8 down-2"
             value="পরবর্তী"
           />
         </font-awesome-layers>
       </div>
     </flipbook>
+    </div>
   </section>
 </template>
 
@@ -44,10 +46,12 @@ export default {
     return {
       pages: [
         null,
-        "https://i.postimg.cc/dVWhSn8G/cover.png",
-        "https://i.postimg.cc/nhSZBWJ9/page-1-1.jpg",
-        "https://i.postimg.cc/LXdcVK05/page-2-1.jpg",
-        "https://i.postimg.cc/ncdNPQw6/page-3-1.jpg",
+        require('../assets/samplePages/cover.png'),
+        require('../assets/samplePages/page-1.jpg'),
+        require('../assets/samplePages/page-2.jpg'),
+        require('../assets/samplePages/page-3.jpg'),
+        require('../assets/samplePages/page-4.jpg')
+        
       ],
     };
   },
@@ -57,18 +61,15 @@ export default {
 <style scoped>
 .flipbook {
   width: 100%;
-  height: 90vh;
+  height: 80vh;
 
-  background-color: blanchedalmond;
 }
 
-.flipbook .bounding-box {
-  box-shadow: 0 0 20px #000;
-}
+
 
 .page-nav {
   display: flex;
   justify-content: space-around;
-  padding-top: 10px;
+  padding-bottom: 16px;
 }
 </style>
