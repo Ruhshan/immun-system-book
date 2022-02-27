@@ -50,7 +50,12 @@ export default {
         require('../assets/samplePages/page-1.jpg'),
         require('../assets/samplePages/page-2.jpg'),
         require('../assets/samplePages/page-3.jpg'),
-        require('../assets/samplePages/page-4.jpg')
+        require('../assets/samplePages/page-4.jpg'),
+        require('../assets/samplePages/page-5.jpg'),
+        require('../assets/samplePages/page-6.jpg'),
+        require('../assets/samplePages/page-7.jpg'),
+        require('../assets/samplePages/page-8.jpg'),
+        require('../assets/samplePages/page-9.jpg')
         
       ],
     };
