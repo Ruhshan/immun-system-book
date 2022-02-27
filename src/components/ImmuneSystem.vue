@@ -10,8 +10,8 @@
           <a href="#" class="buy-mobile"><strong>সংগ্রহ করতে</strong></a>
         </nav>
         <h1>
-          <span class="a-wrap"><span class="tstyle">ইমিউন </span></span>
-          <span class="a-wrap"><span class="tstyle">সিস্টেম </span></span>
+          <span class="a-wrap"><span class="l1 tstyle">ইমিউন </span></span>
+          <span class="a-wrap"><span class="l2 tstyle">সিস্টেম </span></span>
         </h1>
         <h2>শরীর যেভাবে রোগ প্রতিরোধ করে</h2>
         <h3>— <a href="#author">রুহশান আহমেদ</a></h3>
