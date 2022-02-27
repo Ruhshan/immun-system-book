@@ -881,7 +881,7 @@ ul, ol {
 }
 
 .bar {
-  display: none;
+  display: block;
   z-index: 9999;
   position: fixed;
   right: 30px;

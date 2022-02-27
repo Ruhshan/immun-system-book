@@ -1,6 +1,6 @@
 <template>
   <div id="shape1">
-    <section class="intro home" id="banner">
+    <section class="intro home" id="banner" v-cloak>
       <div class="wrap">
         <nav class="animated fadeIn">
           <a href="#book" class="active"><strong>বই সম্পর্কে</strong></a>
@@ -20,7 +20,10 @@
 
       <animations />
 
-      <div class="icon-scroll animated" :class="{'fadeIn': showScroll, 'fadeOut': !showScroll}">
+      <div
+        class="icon-scroll animated"
+        :class="{ fadeIn: showScroll, fadeOut: !showScroll }"
+      >
         <span id="scrollPointer">স্ক্রল</span>
       </div>
     </section>
@@ -29,6 +32,9 @@
     <sample />
     <chapters />
     <about-author />
+    <div class="bar animated" v-show="!showScroll" >
+      <a href="" class="button"><strong>সংগ্রহ করতে</strong></a>
+    </div>
   </div>
 </template>
 
@@ -59,18 +65,20 @@ export default {
   methods: {
     handleScroll: function () {
       //console.log("Handling scroll", event);
-      var bannerSize = document.getElementById("banner").getBoundingClientRect();
+      var bannerSize = document
+        .getElementById("banner")
+        .getBoundingClientRect();
 
-      var scrollPointerPosition = this.getOffset(document.getElementById("scrollPointer"));
-      console.log(scrollPointerPosition.top, bannerSize.bottom);''
-      if(scrollPointerPosition.top>bannerSize.bottom){
-          this.showScroll = false;
-      }
-      else{
+      var scrollPointerPosition = this.getOffset(
+        document.getElementById("scrollPointer")
+      );
+      console.log(scrollPointerPosition.top, bannerSize.bottom);
+      ("");
+      if (scrollPointerPosition.top > bannerSize.bottom) {
+        this.showScroll = false;
+      } else {
         this.showScroll = true;
       }
-      
-      
     },
     getOffset: function (el) {
       var _x = 0;
