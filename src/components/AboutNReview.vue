@@ -17,7 +17,7 @@
         </p>
       </div>
       <div class="reviews right-col">
-        <h2><strong>পাঠকের মন্ত্যব্য</strong></h2>
+        <h2><strong>পাঠকের মন্তব্য</strong></h2>
 
         <slick ref="slick" :options="slickOptions">
           <div v-for="review in reviews" :key="review.id">
