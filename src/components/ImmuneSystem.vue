@@ -70,6 +70,7 @@ export default {
     return {
       showScroll: true,
       initialScrollPointerPositionDelta: 0,
+      delta: 0
     };
   },
   methods: {
@@ -81,6 +82,8 @@ export default {
       var scrollPointerPosition = this.getOffset(
         document.getElementById("scrollPointer")
       );
+
+      console.log(scrollPointerPosition.top, bannerSize.bottom+this.delta+100)
 
       if (scrollPointerPosition.top > bannerSize.bottom+ this.delta+100) {
         this.showScroll = false;
