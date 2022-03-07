@@ -113,7 +113,7 @@ export default {
       }
       return { top: _y, left: _x };
     },
-    show:function(){
+    show: function(){
         this.$modal.show('my-first-modal');
     }
   },
