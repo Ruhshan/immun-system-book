@@ -4,9 +4,9 @@
       <div class="wrap">
         <nav class="animated fadeIn">
           <a href="#book" class="active"><strong>বই সম্পর্কে</strong></a>
-          <a href="#" class="buy" style="z-index: 300" @click="show"
+          <a href="https://www.rokomari.com/book/229888/immune-system" target="_blank" class="buy" style="z-index: 300" 
             ><strong>সংগ্রহ করতে</strong></a>
-          <a href="#" class="buy-mobile"><strong>সংগ্রহ করতে</strong></a>
+          <a href="https://www.rokomari.com/book/229888/immune-system" target="_blank" class="buy-mobile"><strong>সংগ্রহ করতে</strong></a>
         </nav>
         <h1>
           <span class="a-wrap"><span class="l1 tstyle">ইমিউন </span></span>
@@ -32,15 +32,8 @@
     <chapters />
     <about-author />
     <div class="bar animated" v-show="!showScroll">
-      <span class="button" @click="show"><strong>সংগ্রহ করতে</strong></span>
+      <a href="https://www.rokomari.com/book/229888/immune-system" class="button" target="_blank"><strong>সংগ্রহ করতে</strong></a>
     </div>
-
-    <modal name="my-first-modal">
-        <p class="text author" style="font-size:20px">
-          বইটি পাওয়া যাচ্ছে একুশে বইমেলায় আদর্শ প্রকাশনীর(৩৩৩) স্টলে। <br>
-          অনলাইনে অর্ডার করতে পারেন <a href="https://www.rokomari.com/book/229888/immune-system ">রকমারি ডট কম</a> থেকে
-        </p>
-    </modal>
   </div>
 </template>
 
