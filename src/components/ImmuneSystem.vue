@@ -4,9 +4,8 @@
       <div class="wrap">
         <nav class="animated fadeIn">
           <a href="#book" class="active"><strong>বই সম্পর্কে</strong></a>
-          <a href="#" class="buy" style="z-index: 300"
-            ><strong>সংগ্রহ করতে</strong></a
-          >
+          <a href="#" class="buy" style="z-index: 300" @click="show"
+            ><strong>সংগ্রহ করতে</strong></a>
           <a href="#" class="buy-mobile"><strong>সংগ্রহ করতে</strong></a>
         </nav>
         <h1>
@@ -33,8 +32,14 @@
     <chapters />
     <about-author />
     <div class="bar animated" v-show="!showScroll">
-      <a href="" class="button"><strong>সংগ্রহ করতে</strong></a>
+      <span class="button" @click="show"><strong>সংগ্রহ করতে</strong></span>
     </div>
+
+    <modal name="my-first-modal">
+        <p class="text author" style="font-size:20px">
+          বইটি পাওয়া যাচ্ছে একুশে বইমেলায় আদর্শ প্রকাশনীর(৩৩৩) স্টলে। 
+        </p>
+    </modal>
   </div>
 </template>
 
@@ -108,6 +113,9 @@ export default {
       }
       return { top: _y, left: _x };
     },
+    show:function(){
+        this.$modal.show('my-first-modal');
+    }
   },
 };
 </script>

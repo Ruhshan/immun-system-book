@@ -16,6 +16,7 @@
     "flipbook-vue": "^0.10.4",
     "set-random-interval": "^1.1.0",
     "vue": "^2.6.11",
+    "vue-js-modal": "^2.0.1",
     "vue-slick": "^1.1.16"
   },
   "devDependencies": {

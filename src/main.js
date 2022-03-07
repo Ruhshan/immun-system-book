@@ -9,7 +9,8 @@ import {
   faMinusCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import {faLinkedin, faResearchgate, faFacebook, faMedium} from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon ,FontAwesomeLayers, FontAwesomeLayersText} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon ,FontAwesomeLayers, FontAwesomeLayersText} from "@fortawesome/vue-fontawesome"
+import VModal from 'vue-js-modal'
 
 library.add(
   faChevronCircleLeft,
@@ -26,7 +27,7 @@ library.add(
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.component('font-awesome-layers', FontAwesomeLayers);
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText);
-
+Vue.use(VModal)
 
 Vue.config.productionTip = false
 
