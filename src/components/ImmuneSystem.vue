@@ -37,7 +37,8 @@
 
     <modal name="my-first-modal">
         <p class="text author" style="font-size:20px">
-          বইটি পাওয়া যাচ্ছে একুশে বইমেলায় আদর্শ প্রকাশনীর(৩৩৩) স্টলে। 
+          বইটি পাওয়া যাচ্ছে একুশে বইমেলায় আদর্শ প্রকাশনীর(৩৩৩) স্টলে। <br>
+          অনলাইনে অর্ডার করতে পারেন <a href="https://www.rokomari.com/book/229888/immune-system ">রকমারি ডট কম</a> থেকে
         </p>
     </modal>
   </div>
