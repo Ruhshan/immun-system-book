@@ -61,7 +61,7 @@
         </li>
       </ul>
       <p class="email clear">
-        <a href="https://andrewcouldwell.com" target="_blank" class="portfolio"
+        <a href="" target="_blank" class="portfolio"
           >ruhshan.xyz</a
         >
         <span class="maily">book@ruhshan.xyz</span>
